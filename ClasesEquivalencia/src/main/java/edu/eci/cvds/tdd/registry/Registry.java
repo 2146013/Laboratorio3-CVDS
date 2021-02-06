@@ -18,7 +18,7 @@ public class Registry {
         else if (p.getAge() > 0  && p.getAge()< 18 && p.isAlive()){
             result = RegisterResult.UNDERAGE;
         }
-        else if (p.getAge() < 0 && p.getAge()>300 && p.isAlive()){
+        else if (p.getAge() < 0 || p.getAge()>300 && p.isAlive()){
             result = RegisterResult.INVALID_AGE;
         }
         return result;
